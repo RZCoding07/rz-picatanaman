@@ -436,102 +436,63 @@ https://templatemo.com/tm-590-topic-listing
 
 
     <script>
-        setTimeout(() => {
-            $('#bulan').trigger('change');
-        }, 500);
-        // Fetch data from the API
-        fetch('<?= base_url() ?>picaTahun')
-            .then(response => response.json())
-            .then(data => {
-                // Get the select element
-                const select = document.getElementById('tahun');
+        function fetchData(url) {
+            return fetch(url)
+                .then(response => response.json());
+        }
 
-                // Create new option elements for each data item
-                data.forEach(item => {
+        const fetchTahun = fetchData('<?= base_url() ?>picaTahun');
+        const fetchBulan = fetchData('<?= base_url() ?>picaBulan');
+        const fetchKebun = fetchData('<?= base_url() ?>picaKebun');
+        const fetchRpc = fetchData('<?= base_url() ?>picaRpc');
+
+        Promise.all([fetchTahun, fetchBulan, fetchKebun, fetchRpc])
+            .then(([tahunData, bulanData, kebunData, rpcData]) => {
+                const tahunSelect = document.getElementById('tahun');
+                tahunData.forEach(item => {
                     const option = document.createElement('option');
                     option.value = item.Realisasi_Tahun;
                     option.text = item.Realisasi_Tahun;
-
-                    // Append the option to the select element
-                    select.appendChild(option);
+                    tahunSelect.appendChild(option);
                 });
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
-    <script>
-        // Fetch data from the API
-        fetch('<?= base_url() ?>picaBulan')
-            .then(response => response.json())
-            .then(data => {
-                // Get the select element
-                const select = document.getElementById('bulan');
 
-                // Create new option elements for each data item
-                data.forEach(item => {
+                const bulanSelect = document.getElementById('bulan');
+                bulanData.forEach(item => {
                     const option = document.createElement('option');
                     option.value = item.Realisasi_Bulan;
                     option.text = item.Realisasi_Bulan;
-
-                    // Append the option to the select element
-                    select.appendChild(option);
+                    bulanSelect.appendChild(option);
                 });
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
-    <script>
-        // Fetch data from the API
-        fetch('<?= base_url() ?>picaKebun')
-            .then(response => response.json())
-            .then(data => {
-                // Get the select element
-                const select = document.getElementById('kebun');
 
-                // Add default option with value 99
-                const defaultOption = document.createElement('option');
-                defaultOption.value = '99';
-                defaultOption.text = 'All Kebun';
-                select.appendChild(defaultOption);
-
-                // Create new option elements for each data item
-                data.forEach(item => {
+                const kebunSelect = document.getElementById('kebun');
+                const defaultKebunOption = document.createElement('option');
+                defaultKebunOption.value = '99';
+                defaultKebunOption.text = 'All Kebun';
+                kebunSelect.appendChild(defaultKebunOption);
+                kebunData.forEach(item => {
                     const option = document.createElement('option');
                     option.value = item.Kebun;
                     option.text = item.Kebun;
-
-                    // Append the option to the select element
-                    select.appendChild(option);
+                    kebunSelect.appendChild(option);
                 });
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
-    <script>
-        // Fetch data from the API
-        fetch('<?= base_url() ?>picaRpc')
-            .then(response => response.json())
-            .then(data => {
-                // Get the select element
-                const select = document.getElementById('rpc');
 
-                // Create new option elements for each data item
-                data.forEach(item => {
+                const rpcSelect = document.getElementById('rpc');
+                const defaultRpcOption = document.createElement('option');
+                defaultRpcOption.value = '99';
+                defaultRpcOption.text = 'All Region';
+                rpcSelect.appendChild(defaultRpcOption);
+                rpcData.forEach(item => {
                     const option = document.createElement('option');
                     option.value = item.RPC;
                     option.text = item.RPC;
-
-                    // Append the option to the select element
-                    select.appendChild(option);
+                    rpcSelect.appendChild(option);
                 });
 
-                // Add default option with value 99
-                const defaultOption = document.createElement('option');
-                defaultOption.value = '99';
-                defaultOption.text = 'All Region';
-                select.appendChild(defaultOption);
+                // Call onDataChange after all data is populated
+                onDataChange();
             })
             .catch(error => console.error('Error:', error));
-    </script>
 
-    <script>
         function onDataChange() {
             const tahun = document.getElementById('tahun').value;
             const bulan = document.getElementById('bulan').value;
@@ -597,21 +558,16 @@ https://templatemo.com/tm-590-topic-listing
                             }]
                         };
 
-
                         let chart = chartMap.get(`${i}`);
                         i++;
                         chart.setOption(option);
                         console.log(chart); // Check if chart is defined before logging it
-                        // if (chart) {
-                        //     // Do something with the chart
-                        // } else {
-                        //     console.log('chart is not defined');
-                        // }
                     }
                 })
                 .catch(error => console.error('Error:', error));
         }
     </script>
+
 </body>
 
 </html>
