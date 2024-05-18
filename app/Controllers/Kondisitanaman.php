@@ -24,8 +24,8 @@ class Kondisitanaman extends BaseController
 	{
 
 		$data = [
-			'controller'    	=> ucwords('kondisitanaman'),
-			'title'     		=> ucwords('kondisitanaman')
+			'controller'    	=> ucwords('kondisi tanaman'),
+			'title'     		=> ucwords('kondisi tanaman')
 		];
 
 		return view('kondisitanaman', $data);

@@ -6,7 +6,7 @@
 <section class="content">
   <div class="box">
     <div class="box-header with-border">
-      <h4 class="box-title text-capitalize">Data kondisitanaman</h4>
+      <h4 class="box-title text-capitalize">Data kondisi tanaman</h4>
       <button type="button" class="btn float-end btn-primary btn-sm" onclick="save()" title="<?= lang("App.new") ?>"> <?= lang('App.new') ?></button>
     </div>
     <div class="box-body">
