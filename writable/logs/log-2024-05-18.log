@@ -1,0 +1,153 @@
+ERROR - 2024-05-18 16:03:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#6 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+#7 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#8 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#9 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#5 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+#6 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#7 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#8 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#13 {main}
+CRITICAL - 2024-05-18 16:03:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: Kondisitanaman/getAll]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `kondisitanaman`', [], false)
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\rz_tanaman\\public\\index.php')
+ERROR - 2024-05-18 16:05:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#6 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+#7 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#8 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#9 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#5 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+#6 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#7 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#8 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#13 {main}
+CRITICAL - 2024-05-18 16:05:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: Kondisitanaman/getAll]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `kondisitanaman`', [], false)
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\rz_tanaman\\public\\index.php')
+ERROR - 2024-05-18 16:05:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#6 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+#7 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#8 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#9 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#5 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\app\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+#6 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#7 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#8 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\RIZKY\Documents\RZLabs\rz_tanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#13 {main}
+CRITICAL - 2024-05-18 16:05:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: Kondisitanaman/getAll]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `kondisitanaman`', [], false)
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\Kondisitanaman.php(48): RZCoding\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\rz_tanaman\\public\\index.php')

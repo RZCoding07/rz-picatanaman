@@ -34,7 +34,7 @@ class Kondisitanaman extends BaseController
 	public function getAll()
 	{		
 		$db = db_connect();
-		$builder = $db->table('kondisitanaman')->select('id, RPC, Kondisi, Status, Kebun, KKL_KEBUN, Afd, Tahun_Tanam, No_Blok, Luas_Ha, Jlh_Pokok, Pkk_Ha, Realisasi_Bulan, Realisasi_Tahun, Realisasi, Kriteria');
+		$builder = $db->table('KondisiTanaman')->select('id, RPC, Kondisi, Status, Kebun, KKL_KEBUN, Afd, Tahun_Tanam, No_Blok, Luas_Ha, Jlh_Pokok, Pkk_Ha, Realisasi_Bulan, Realisasi_Tahun, Realisasi, Kriteria');
 		return DataTable::of($builder)
 		->addNumbering()
 		->hide('id')
