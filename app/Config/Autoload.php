@@ -40,7 +40,10 @@ class Autoload extends AutoloadConfig
      * @var array<string, list<string>|string>
      */
     public $psr4 = [
+        'Config'      => APPPATH . 'Config',
         APP_NAMESPACE => APPPATH,
+        'PHPSQLParser' => APPPATH . 'Libraries/php-sql-parser/src/PHPSQLParser',
+        'RZCoding\DataTables' => APPPATH . 'Libraries/codeIgniter4-datatables/src'
     ];
 
     /**

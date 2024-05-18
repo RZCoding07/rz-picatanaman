@@ -1,0 +1,285 @@
+CRITICAL - 2024-05-18 05:12:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/naster_public.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/naster_public.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('layouts/naster_public', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('layouts/naster_public')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+INFO - 2024-05-18 05:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 05:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 05:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 05:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-18 11:10:10 --> mysqli_sql_exception: Table 'ci4tanaman.customers' doesn't exist in C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#6 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+#7 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#8 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#9 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\RIZKY\Documents\RZLabs\picatanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#14 {main}
+CRITICAL - 2024-05-18 11:10:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4tanaman.customers' doesn't exist
+[Method: GET, Route: Kondisitanaman/getAll]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 2 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+CRITICAL - 2024-05-18 11:10:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4tanaman.customers' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+CRITICAL - 2024-05-18 11:10:10 --> [Caused by] mysqli_sql_exception: Table 'ci4tanaman.customers' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 5 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+INFO - 2024-05-18 11:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-18 11:10:25 --> mysqli_sql_exception: Table 'ci4tanaman.customers' doesn't exist in C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#6 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+#7 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#8 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#9 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\RIZKY\Documents\RZLabs\picatanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#14 {main}
+CRITICAL - 2024-05-18 11:10:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4tanaman.customers' doesn't exist
+[Method: GET, Route: Kondisitanaman/getAll]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 2 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+CRITICAL - 2024-05-18 11:10:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4tanaman.customers' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+CRITICAL - 2024-05-18 11:10:25 --> [Caused by] mysqli_sql_exception: Table 'ci4tanaman.customers' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 5 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+ERROR - 2024-05-18 11:10:31 --> mysqli_sql_exception: Table 'ci4tanaman.customers' doesn't exist in C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+#6 C:\Users\RIZKY\Documents\RZLabs\picatanaman\app\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+#7 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+#8 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+#9 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\RIZKY\Documents\RZLabs\picatanaman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\RIZKY\Documents\RZLabs\picatanaman\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\...')
+#14 {main}
+CRITICAL - 2024-05-18 11:10:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4tanaman.customers' doesn't exist
+[Method: GET, Route: Kondisitanaman/getAll]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 2 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+CRITICAL - 2024-05-18 11:10:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4tanaman.customers' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+CRITICAL - 2024-05-18 11:10:31 --> [Caused by] mysqli_sql_exception: Table 'ci4tanaman.customers' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `customers`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `customers`', [], false)
+ 5 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(174): RZCoding\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+INFO - 2024-05-18 11:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-18 11:12:17 --> ErrorException: Undefined array key "no_quotes"
+[Method: GET, Route: Kondisitanaman/getAll]
+in APPPATH\Libraries\codeIgniter4-datatables\src\DataTableColumnDefs.php on line 261.
+ 1 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableColumnDefs.php(261): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "no_quotes"', 'C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\app\\Libraries\\codeIgniter4-datatables\\src\\DataTableColumnDefs.php', 261)
+ 2 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableColumnDefs.php(17): RZCoding\DataTables\DataTableColumnDefs->initFromBuilder(Object(CodeIgniter\Database\MySQLi\Builder))
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(35): RZCoding\DataTables\DataTableColumnDefs->__construct(Object(CodeIgniter\Database\MySQLi\Builder))
+ 4 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(46): RZCoding\DataTables\DataTable->__construct(Object(CodeIgniter\Database\MySQLi\Builder))
+ 5 APPPATH\Controllers\Kondisitanaman.php(38): RZCoding\DataTables\DataTable::of(Object(CodeIgniter\Database\MySQLi\Builder))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+INFO - 2024-05-18 11:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-18 11:15:12 --> ErrorException: Undefined property: stdClass::$id
+[Method: GET, Route: Kondisitanaman/getAll]
+in APPPATH\Controllers\Kondisitanaman.php on line 42.
+ 1 APPPATH\Controllers\Kondisitanaman.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\app\\Controllers\\Kondisitanaman.php', 42)
+ 2 APPPATH\Libraries\codeIgniter4-datatables\src\DataTableQuery.php(91): App\Controllers\Kondisitanaman->App\Controllers\{closure}(Object(stdClass))
+ 3 APPPATH\Libraries\codeIgniter4-datatables\src\DataTable.php(176): RZCoding\DataTables\DataTableQuery->getDataResult()
+ 4 APPPATH\Controllers\Kondisitanaman.php(47): RZCoding\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kondisitanaman->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kondisitanaman))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\RIZKY\\Documents\\RZLabs\\picatanaman\\public\\index.php')
+INFO - 2024-05-18 11:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 11:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-18 14:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
