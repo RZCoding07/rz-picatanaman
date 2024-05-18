@@ -400,27 +400,16 @@ https://templatemo.com/tm-590-topic-listing
                     show: false
                 },
                 series: [{
-                    name: 'Access From',
+                    name: 'Luas HA',
                     type: 'pie',
-                    radius: ['40%', '70%'],
+                    radius: '50%',
                     avoidLabelOverlap: false,
-                    padAngle: 5,
-                    itemStyle: {
-                        borderRadius: 10
-                    },
-                    label: {
-                        show: false,
-                        position: 'center'
-                    },
                     emphasis: {
-                        label: {
-                            show: true,
-                            fontSize: 20,
-                            fontWeight: 'bold'
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
                         }
-                    },
-                    labelLine: {
-                        show: false
                     },
                     data: []
                 }]
