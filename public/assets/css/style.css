@@ -25763,7 +25763,7 @@ time {
   100% {
     -moz-transform: scale(1);
     opacity: 0.0; } }
-@-webkit-keyframes "mappulse" {
+@keyframes mappulse {
   0% {
     -webkit-transform: scale(0);
     opacity: 0.0; }
@@ -31664,15 +31664,20 @@ button.btn.dropdown-toggle:after {
 
 .card-columns .card {
   margin-bottom: 1.5rem; }
-@media (min-width: 576px) {
-  .card-columns {
-    column-count: 3;
-    column-gap: calc($default-gutter-width / 2);
-    orphans: 1;
-    widows: 1; }
+
+  @media (min-width: 576px) {
+    .card-columns {
+      column-count: 3;
+      column-gap: calc(var(--default-gutter-width) / 2);
+      orphans: 1;
+      widows: 1;
+    }
     .card-columns .card {
       display: inline-block;
-      width: 100%; } }
+      width: 100%;
+    }
+  }
+  
 
 .box .dataTables_wrapper {
   padding-left: 0;

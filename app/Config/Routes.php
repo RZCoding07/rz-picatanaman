@@ -20,6 +20,8 @@ $routes->get('/topics-listing', 'Home::topicsListing');
 $routes->get('/monitoring-pica', 'Home::monitoringPica');
 $routes->get('/grafik-kuadran', 'Home::grafikKuadran');
 
+$routes->post('/upload-kuadran', 'Upload::uploadKuadran');
+
 $routes->post('/upload', 'Upload::index');
 $routes->post('/uploadKuadran', 'Upload::uploadKuadran');
 

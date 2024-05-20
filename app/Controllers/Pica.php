@@ -48,14 +48,12 @@ class Pica extends BaseController
         $graphData = $this->transformDataForGraph($data);
 
         // Return the transformed data as JSON
-        return $this->response->setJSON($graphData);
+        return $this->response->setJSON($data);
     }
 
 
     private function transformDataForGraph($data)
     {
-
-
         // Initialize an array to hold the total "Luas_Ha" for each status and kriteria
         $result = [
             "TOTAL" => [
@@ -102,32 +100,10 @@ class Pica extends BaseController
             ]
         ];
 
-        // example data
-        // {
-        //     "id": "1",
-        //     "RPC": "RPC1",
-        //     "Kondisi": " B. Tanaman Menghasilkan ",
-        //     "Status": "DEWASA",
-        //     "Kebun": "KSD",
-        //     "KKL_KEBUN": "S3",
-        //     "Afd": "AFD01",
-        //     "Tahun_Tanam": "2006",
-        //     "No_Blok": "AA13",
-        //     "Luas_Ha": "23.85",
-        //     "Jlh_Pokok": "3102",
-        //     "Pkk_Ha": "130",
-        //     "Realisasi_Bulan": "Januari",
-        //     "Realisasi_Tahun": "2024",
-        //     "Realisasi": "2217",
-        //     "Kriteria": "EMAS",
-        //     "created_at": "2024-05-17 13:29:31",
-        //     "updated_at": "2024-05-17 13:29:31"
-        // }
-
         // Process the input data
         foreach ($data as $entry) {
-            $status = strtoupper($entry['Status']);
-            $criteriaName = strtoupper($entry['Kriteria']);
+            $status = $entry['Status'];
+            $criteriaName = $entry['Kriteria'];
             $luasHa = floatval($entry['Luas_Ha']);
 
             if (isset($result[$status])) {

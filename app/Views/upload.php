@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <script src="js/uploadScript.js"></script>
+    <script src="/js/uploadScript.js"></script>
     <script>
         const CHUNK_SIZE = 50; // 50 bytes chunks
 
