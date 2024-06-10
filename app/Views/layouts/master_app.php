@@ -107,7 +107,10 @@
                             <a class="text-capitalize waves-effect bg-white waves-light nav-link" href="<?= base_url('histori') ?>">Histori Kinerja</a>
                         </li>
                         <li style="font-weight:500;" class="px-5 btn-group nav-item d-none d-xl-inline-block d-flex justify-content-center align-items-center">
-                            <a class="text-capitalize waves-effect bg-white waves-light nav-link" href="<?= base_url('identifikasi-masalah') ?>">Identifikasi Masalah</a>
+                            <a class="text-capitalize waves-effect bg-white waves-light nav-link" href="<?= base_url('identifikasi-masalah-admin') ?>">Identifikasi Masalah</a>
+                        </li>
+                        <li style="font-weight:500;" class="px-5 btn-group nav-item d-none d-xl-inline-block d-flex justify-content-center align-items-center">
+                            <a class="text-capitalize waves-effect bg-white waves-light nav-link" href="<?= base_url('kondisitanaman') ?>">Kondisi Tanaman</a>
                         </li>
                         <li style="font-weight:500;" class="px-5 btn-group nav-item d-none d-xl-inline-block d-flex justify-content-center align-items-center">
                             <a class="text-capitalize waves-effect bg-white waves-light nav-link" href="<?= base_url('program-kerja') ?>">Progam Kerja</a>
@@ -227,7 +230,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="identifikasimasalah">
+                                <a href="kondisitanaman">
+                                    <i class="fad fa-tasks"></i><span class="path1"></span><span class="path2"></span></i>
+                                    <span>Kondisi Tanaman</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="identifikasi-masalah-admin">
                                     <i class="fad fa-th-list"></i><span class="path1"></span><span class="path2"></span></i>
                                     <span>Identifikasi Masalah</span>
                                 </a>
