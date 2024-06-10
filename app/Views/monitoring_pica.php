@@ -131,7 +131,7 @@ https://templatemo.com/tm-590-topic-listing
                         <div class="card-body">
                             <div class="section-title text-dark">
                                 <!-- <h2 class="text-center">Beranda</h2> -->
-                                <h6 class="text-center">Problem Identification</h6>
+                                <h6 class="text-center">Monitoring PICA</h6>
                                 <div class="container-fluid">
                                     <div class="row justify-content-center align-items-center">
                                         <!-- <div class="col-md-3">
