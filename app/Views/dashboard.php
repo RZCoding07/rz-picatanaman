@@ -71,7 +71,7 @@ https://templatemo.com/tm-590-topic-listing
                             <a class="nav-link click-scroll" href=" <?= base_url('/histori-kinerja') ?>">History Kinerja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href=" <?= base_url('/detail-pica-kebun') ?>">Detail Pica Kebun</a>
+                            <a class="nav-link click-scroll" href=" <?= base_url('/identifikasi-masalah') ?>">Identifikasi Masalah</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href=" <?= base_url('/program-kerja') ?>">Program Kerja</a>
