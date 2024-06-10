@@ -34,3 +34,7 @@ $routes->get('/picaRpc', 'Pica::getAllRpc');
 $routes->get('/picaKebun', 'Pica::getAllKebun');
 $routes->get('/picaBulan', 'Pica::getAllBulan');
 $routes->get('/picaTahun', 'Pica::getAllTahun');
+
+$routes->get('identifikasi-masalah', 'IdentifikasiMasalah::index');
+$routes->get('identifikasi-masalah-admin', 'IdentifikasiMasalah::admin');
+$routes->post('identifikasi-masalah/get-data', 'IdentifikasiMasalah::getKondisiTanamanFromPost');
